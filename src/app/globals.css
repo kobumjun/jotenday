@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fefbff;
+  --foreground: #2d2640;
+  --muted: #6b6079;
+  --lavender: #e8ddff;
+  --lavender-deep: #c4b5fd;
+  --pink-soft: #ffe4f0;
+  --pink-accent: #f472b6;
+  --pink-deep: #db2777;
+  --card: #ffffff;
+  --border: #ece8f4;
+  --ring: #d8b4fe;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-lavender: var(--lavender);
+  --color-lavender-deep: var(--lavender-deep);
+  --color-pink-soft: var(--pink-soft);
+  --color-pink-accent: var(--pink-accent);
+  --color-pink-deep: var(--pink-deep);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-noto);
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+  --shadow-card: 0 18px 50px -24px rgba(91, 33, 182, 0.35);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pink-accent) 35%, transparent);
 }
