@@ -14,6 +14,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </Link>
           {ok ? (
             <nav className="flex flex-wrap items-center gap-4 text-sm text-zinc-300">
+              <Link href="/admin/orders" className="hover:text-white">
+                주문
+              </Link>
               <Link href="/admin/reviews" className="hover:text-white">
                 후기
               </Link>

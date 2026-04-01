@@ -183,6 +183,43 @@ create policy "external_links_select"
   to anon, authenticated
   using (true);
 
+-- Match orders (상품 신청)
+create table if not exists public.match_orders (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  user_id uuid references auth.users (id) on delete set null,
+  product_code text not null,
+  product_name text not null,
+  applicant_name text not null,
+  age int,
+  gender text check (gender in ('male', 'female', 'other')),
+  phone text not null,
+  job text,
+  region text,
+  bio text,
+  preferred_style text,
+  available_time text,
+  note text,
+  smoking text,
+  drinking text,
+  preferred_mood text,
+  status text not null default 'pending' check (status in ('pending', 'contacted', 'completed', 'canceled')),
+  admin_memo text,
+  contacted_at timestamptz
+);
+
+alter table public.match_orders enable row level security;
+
+create policy "match_orders_insert_anyone"
+  on public.match_orders for insert
+  to anon, authenticated
+  with check (true);
+
+create policy "match_orders_select_own"
+  on public.match_orders for select
+  to authenticated
+  using (user_id is not null and auth.uid() = user_id);
+
 -- Storage: 버킷 생성 후 대시보드에서 public 으로 설정하거나 아래 사용
 insert into storage.buckets (id, name, public)
 values ('reviews', 'reviews', true)

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { signInWithUsername } from "@/app/actions/auth";
+import { FormButton } from "@/components/ui/FormButton";
 
 type Props = { searchParams: Promise<{ error?: string; registered?: string }> };
 
@@ -53,12 +54,12 @@ export default async function LoginPage({ searchParams }: Props) {
             required
           />
         </div>
-        <button
-          type="submit"
+        <FormButton
           className="mt-2 rounded-xl bg-gradient-to-r from-[#ddd6fe] to-[#fbcfe8] px-4 py-3 text-sm font-semibold text-[#4c1d95] shadow-sm transition hover:brightness-105 active:scale-[0.99]"
+          pendingLabel="로그인 처리 중..."
         >
           로그인
-        </button>
+        </FormButton>
       </form>
 
       <p className="mt-6 text-center text-sm text-[var(--muted)]">

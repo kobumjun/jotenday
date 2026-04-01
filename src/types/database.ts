@@ -55,3 +55,27 @@ export type ExternalChannelPlaceholder = {
   href: string;
   sort_order: number;
 };
+
+export type MatchOrderRow = {
+  id: string;
+  created_at: string;
+  user_id: string | null;
+  product_code: string;
+  product_name: string;
+  applicant_name: string;
+  age: number | null;
+  gender: string | null;
+  phone: string;
+  job: string | null;
+  region: string | null;
+  bio: string | null;
+  preferred_style: string | null;
+  available_time: string | null;
+  note: string | null;
+  smoking: string | null;
+  drinking: string | null;
+  preferred_mood: string | null;
+  status: "pending" | "contacted" | "completed" | "canceled";
+  admin_memo: string | null;
+  contacted_at: string | null;
+};

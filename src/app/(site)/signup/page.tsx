@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { signUpWithProfile } from "@/app/actions/auth";
+import { FormButton } from "@/components/ui/FormButton";
 
 type Props = { searchParams: Promise<{ error?: string }> };
 
@@ -127,12 +128,12 @@ export default async function SignupPage({ searchParams }: Props) {
           </span>
         </label>
 
-        <button
-          type="submit"
+        <FormButton
           className="mt-2 rounded-xl bg-gradient-to-r from-[#ddd6fe] to-[#fbcfe8] px-4 py-3 text-sm font-semibold text-[#4c1d95] shadow-sm transition hover:brightness-105 active:scale-[0.99]"
+          pendingLabel="가입 처리 중..."
         >
           가입하기
-        </button>
+        </FormButton>
       </form>
 
       <p className="mt-6 text-center text-sm text-[var(--muted)]">

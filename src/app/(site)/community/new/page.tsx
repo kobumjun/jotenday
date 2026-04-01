@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createCommunityPost } from "@/app/actions/community";
+import { FormButton } from "@/components/ui/FormButton";
 
 type Props = { searchParams: Promise<{ error?: string }> };
 
@@ -44,12 +45,12 @@ export default async function CommunityNewPage({ searchParams }: Props) {
             required
           />
         </div>
-        <button
-          type="submit"
+        <FormButton
           className="rounded-xl bg-gradient-to-r from-[#ddd6fe] to-[#fbcfe8] px-4 py-3 text-sm font-semibold text-[#4c1d95] shadow-sm transition hover:brightness-105"
+          pendingLabel="등록 중..."
         >
           등록하기
-        </button>
+        </FormButton>
       </form>
     </div>
   );

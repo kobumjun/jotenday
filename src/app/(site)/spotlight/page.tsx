@@ -33,8 +33,8 @@ export default async function SpotlightPage() {
           좋을텐데가 전하는 소식
         </h1>
         <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-          이벤트, SNS, 블로그 등 외부 채널로 만남 이야기를 더 가까이에서 만나보세요. 링크는 준비되는
-          대로 연결됩니다.
+          좋을텐데의 다양한 소식과 이야기를 한곳에 모았습니다. 이벤트, 콘텐츠, 일상 기록을 순차적으로
+          업데이트하고 있어요.
         </p>
       </header>
 
@@ -65,7 +65,7 @@ export default async function SpotlightPage() {
                     disabled
                     className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-xl border border-dashed border-[var(--border)] bg-[#faf8ff] px-4 py-3 text-sm font-semibold text-[var(--muted)]"
                   >
-                    링크 연결 예정
+                    준비 중인 채널입니다
                   </button>
                 )}
               </div>

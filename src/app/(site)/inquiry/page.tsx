@@ -1,4 +1,5 @@
 import { submitInquiry } from "@/app/actions/inquiry";
+import { FormButton } from "@/components/ui/FormButton";
 
 type Props = { searchParams: Promise<{ sent?: string; error?: string }> };
 
@@ -10,8 +11,7 @@ export default async function InquiryPage({ searchParams }: Props) {
       <p className="text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">Contact</p>
       <h1 className="mt-3 text-3xl font-semibold tracking-tight text-[#2d2640]">1:1 문의</h1>
       <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
-        남겨주신 내용은 관리자 페이지에서만 확인합니다. 빠르게 회신드릴 수 있도록 연락처를 정확히
-        적어 주세요.
+        궁금한 점이나 상담이 필요하시면 편하게 남겨 주세요. 확인 후 순차적으로 연락을 드립니다.
       </p>
 
       {sp.sent === "1" ? (
@@ -61,12 +61,12 @@ export default async function InquiryPage({ searchParams }: Props) {
             required
           />
         </div>
-        <button
-          type="submit"
+        <FormButton
           className="rounded-xl bg-gradient-to-r from-[#ddd6fe] to-[#fbcfe8] px-4 py-3 text-sm font-semibold text-[#4c1d95] shadow-sm transition hover:brightness-105"
+          pendingLabel="전송 중..."
         >
           문의 보내기
-        </button>
+        </FormButton>
       </form>
     </div>
   );

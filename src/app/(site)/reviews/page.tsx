@@ -22,7 +22,7 @@ export default async function ReviewsPage() {
           만남 후기
         </h1>
         <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-          실제 참가자의 이야기를 엄선해 소개합니다. 텍스트와 이미지는 운영팀이 등록·관리합니다.
+          좋을텐데를 통해 이어진 만남의 순간들을 담았습니다. 다양한 경험과 후기를 확인해 보세요.
         </p>
       </header>
 

@@ -10,11 +10,7 @@ export default function FaqPage() {
           자주 묻는 질문
         </h1>
         <p className="mt-4 text-[var(--muted)]">
-          운영 정책과 서비스 이용에 관한 답변입니다. 문구는{" "}
-          <code className="rounded bg-[#f6f2ff] px-1.5 py-0.5 text-xs text-[#6d28d9]">
-            src/content/faq.ts
-          </code>{" "}
-          에서 수정할 수 있습니다.
+          서비스 이용 전에 자주 주시는 질문을 모았습니다. 이용 방법과 주요 안내 사항을 한눈에 확인해 보세요.
         </p>
       </header>
       <div className="mt-10">

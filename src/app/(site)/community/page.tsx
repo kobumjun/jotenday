@@ -20,7 +20,8 @@ export default async function CommunityPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">Community</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#2d2640]">커뮤니티</h1>
           <p className="mt-3 text-sm text-[var(--muted)]">
-            로그인한 회원만 글을 쓸 수 있습니다. 둘러보기는 누구나 가능해요.
+            좋은 만남을 준비하는 분들의 생각과 경험을 나누는 공간입니다. 회원이라면 누구나 글을 작성하고
+            소통할 수 있습니다.
           </p>
         </div>
         <Link
